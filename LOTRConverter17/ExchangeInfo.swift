@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ExchangeInfo: View {
+    
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         ZStack{
             Image(.parchment)
@@ -38,7 +41,7 @@ struct ExchangeInfo: View {
                 
                 //Button
                 Button("Done"){
-                    
+                    dismiss()
                 }
                 .buttonStyle(.borderedProminent)
                 .font(.largeTitle)
